@@ -40,3 +40,14 @@
 .read-the-docs {
   color: #888;
 }
+.camera{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.camera>video{
+  width: 800px;
+  border: 2px solid greenyellow;
+  height: 800px;
+}

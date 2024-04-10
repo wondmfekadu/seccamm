@@ -13,6 +13,7 @@
     "@tensorflow-models/coco-ssd": "^2.2.3",
     "@tensorflow/tfjs": "^4.14.0",
     "agora-rtc-react": "^2.0.0",
+    "firebase": "^10.10.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-webcam": "^7.2.0",
