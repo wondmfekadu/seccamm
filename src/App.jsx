@@ -96,7 +96,7 @@ const App = () => {
 
     recorderRef.current.onstop = async function () {
       const blob = new Blob(chunks, { type: "video/webm" });
-      const title = new Date().toISOString(); // Use date as name
+      const title = new Date() + "";
       const storageRef = ref(storage, "videos/" + title);
       try {
         await uploadBytes(storageRef, blob);
@@ -106,7 +106,7 @@ const App = () => {
        
         await addDoc(collection(firestore, "videos"), {
           videoUrl: url,
-          vidTitle: datetime
+          vidTitle: title
         });
       } catch (error) {
         console.error("Error uploading video:", error);
