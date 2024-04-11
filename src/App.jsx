@@ -2,11 +2,13 @@ import React, { useRef,useState, useEffect } from "react";
 import * as cocoSsd from "@tensorflow-models/coco-ssd";
 import "@tensorflow/tfjs";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
-import { storage } from "./firebaseCOnfig"; // Assuming you've exported your storage instance from firebaseConfig.js
+import { storage } from "./firebaseCOnfig"; 
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
-import { firestore } from "./firebaseCOnfig"; // Assuming you've exported your firestore instance from firebaseConfig.js
+import { firestore } from "./firebaseCOnfig"; 
 import './App.css'
+import Send from './Send.jsx'
 const App = () => {
+
   const [isRecording, setIsRecording] = useState(false);
 
   const videoElement = useRef(null);
@@ -51,6 +53,7 @@ const App = () => {
     if (foundPerson) {
       lastDetectionsRef.current.push(true);
       startRecording();
+
     } else if (lastDetectionsRef.current.filter(Boolean).length) {
       startRecording();
       lastDetectionsRef.current.push(false);
@@ -125,7 +128,9 @@ const App = () => {
   }
 
   return (
-    <div className="camera">
+    <div className="camera ">
+      <Send />
+       <h1 className="heading">Betie</h1>
          <video autoPlay playsInline muted ref={videoElement} />
           {isRecording ? <p>Recording in progress...</p> : <p>Still nothing detected</p>}
           

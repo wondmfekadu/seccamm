@@ -10,10 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.3.3",
     "@tensorflow-models/coco-ssd": "^2.2.3",
     "@tensorflow/tfjs": "^4.14.0",
-    "agora-rtc-react": "^2.0.0",
+    "agora-rtc-react": "github:AgoraIO-Community/agora-rtc-react",
+    "agora-rtc-sdk-ng": "^4.20.2",
+    "emailjs": "^4.0.3",
     "firebase": "^10.10.0",
+    "nodemailer": "^6.9.13",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-webcam": "^7.2.0",
