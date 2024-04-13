@@ -200,11 +200,11 @@ const ChannelForm = props => {
           Please enter your Agora App ID in App.tsx and refresh the page
         </p>
       )}
-      {/* <input
+    <input
         type="text"
         placeholder="Enter Channel Name"
         onChange={e => setChannelName(e.target.value)}
-      /> */}
+      /> 
       <button
         onClick={e => {
           e.preventDefault()
