@@ -214,7 +214,7 @@ const ChannelForm = props => {
       >
         Host
       </button>
-      {/* <button
+      <button
         onClick={e => {
           e.preventDefault()
           setInCall(true)
@@ -222,7 +222,7 @@ const ChannelForm = props => {
         }}
       >
         Join as Audience
-      </button> */}
+      </button> 
     </form>
   )
 }
