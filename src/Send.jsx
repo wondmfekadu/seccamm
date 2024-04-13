@@ -14,7 +14,7 @@ const appId = "8c59aaf317f947d7a5fcd8adba54b880"
 
 const Send = () => {
   const [inCall, setInCall] = useState(false)
-  const [channelName, setChannelName] = useState("betie")
+  const [channelName, setChannelName] = useState("")
   const [host, setHost] = useState(false)
   return (
     <div>
